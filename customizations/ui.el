@@ -80,3 +80,8 @@
 ;; Some font suggestions:  https://www.creativebloq.com/features/the-best-monospace-fonts-for-coding
 ;; (set-face-attribute 'default nil :font "Fira Code")
 
+;; Use indent guides
+(setup (:package highlight-indent-guides)
+       (:hook prog-mode-hook))
+
+
