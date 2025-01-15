@@ -32,10 +32,10 @@
     "editing.el"
     "elisp-editing.el"
     "setup-clojure.el"
-    "golang.el"
     "setup-js.el"
     "shell-integration.el"
-    "docker.el"))
+    "lang.el"
+    "infra.el"))
 
 (dolist (x addons)
   (load x))
