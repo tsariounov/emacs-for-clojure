@@ -32,7 +32,7 @@
 ;; can use a-la-carte. doom-modeline is simply a more
 ;; modern and more beautiful modeline.
 ;; doom-modeline uses nice icons from all-the-icons
-(setup (:package all-the-icons))
+(setup (:package nerd-icons))
 
 ;; for some reason, this crashes Emacs on Windows. Argh!
 (setup (when (not (string-equal system-type "windows-nt"))
@@ -84,4 +84,6 @@
 (setup (:package highlight-indent-guides)
        (:hook prog-mode-hook))
 
-
+;; Setup scrolling
+(global-set-key (kbd "M-n") 'scroll-up-line)
+(global-set-key (kbd "M-p") 'scroll-down-line)

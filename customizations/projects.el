@@ -10,3 +10,6 @@
 ;; counsel-projectile integrates projectile with
 ;; counsel's browse-and-select UI
 (setup (:package counsel-projectile))
+
+;; setup counsel-etags
+(setup (:package counsel-etags))
