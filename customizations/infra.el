@@ -8,4 +8,4 @@
 
 ;; terraform
 (setup (:package terraform-mode))
-
+(setq terraform-format-onsave t)
