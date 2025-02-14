@@ -35,7 +35,8 @@
     "setup-js.el"
     "shell-integration.el"
     "lang.el"
-    "infra.el"))
+    "infra.el"
+    "org.el"))
 
 (dolist (x addons)
   (load x))
