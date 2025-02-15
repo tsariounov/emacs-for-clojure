@@ -36,7 +36,7 @@
     "shell-integration.el"
     "lang.el"
     "infra.el"
-    "org.el"))
+    "orgmode.el"))
 
 (dolist (x addons)
   (load x))
