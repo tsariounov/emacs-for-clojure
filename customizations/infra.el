@@ -8,4 +8,5 @@
 
 ;; terraform
 (setup (:package terraform-mode))
-(setq terraform-format-onsave t)
+(add-hook 'terraform-mode-hook #'terraform-format-on-save-mode)
+
