@@ -1,5 +1,6 @@
 ;; golang-mode for go :) 
 (setup (:package go-mode))
+(add-hook 'go-mode-hook 'lsp-defferred)
 
 ;; python-mode for python :) 
 (setup (:package python-mode))

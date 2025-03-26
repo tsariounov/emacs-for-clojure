@@ -81,8 +81,8 @@
 ;; (set-face-attribute 'default nil :font "Fira Code")
 
 ;; Use indent guides
-(setup (:package highlight-indent-guides)
-       (:hook prog-mode-hook))
+(setup (:package highlight-indent-guides))
+(add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
 
 ;; Setup scrolling
 (global-set-key (kbd "M-n") 'scroll-up-line)
