@@ -1,5 +1,8 @@
 ;; Infrastructure modes
 
+;; ripgrep!!
+(setup (:package rg))
+
 ;; dockerfile mode
 (setup (:package dockerfile-mode))
 
