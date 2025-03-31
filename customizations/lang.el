@@ -4,6 +4,7 @@
 
 ;; python-mode for python :) 
 (setup (:package python-mode))
+(add-hook 'python-mode-hook 'lsp-deferred)
 
 ;; json-mode for json...
 (setup (:package json-mode))
