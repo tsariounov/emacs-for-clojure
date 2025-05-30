@@ -24,7 +24,8 @@
 (add-to-list 'load-path "~/.emacs.d/customizations")
 
 (defvar addons
-  '("ui.el"
+  '(
+    "ui.el"
     "navigation.el"
     "projects.el"
     "git.el"
@@ -37,7 +38,9 @@
     "lang.el"
     "infra.el"
     "orgmode.el"
-    "json-redact.el"))
+    "json-redact.el"
+    "ai.el"
+    ))
 
 (dolist (x addons)
   (load x))
