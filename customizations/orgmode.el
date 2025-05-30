@@ -9,3 +9,6 @@
 
 ;; add the function to find-file-hook
 (add-hook 'find-file-hook 'set-org-mode-for-org-directory)
+
+;; default to /not/ truncate lines...
+(add-hook 'org-mode-hook (lambda () (setq truncate-lines nil)))
