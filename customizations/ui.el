@@ -88,6 +88,7 @@
 (global-set-key (kbd "M-n") 'scroll-up-line)
 (global-set-key (kbd "M-p") 'scroll-down-line)
 
-;; set column numberin mode always
+;; set line:column numbering mode always
+(setq line-number-mode t)
 (setq column-number-mode t)
 
