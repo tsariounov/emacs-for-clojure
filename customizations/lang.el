@@ -1,3 +1,7 @@
+;; activate yas minor mode in all modes that support it so
+;; arg subst works
+(yas-global-mode 1)
+
 ;; golang-mode for go :) 
 (setup (:package go-mode)
        (:local-hook before-save-hook gofmt-before-save))
