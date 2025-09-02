@@ -12,3 +12,16 @@
 
 ;; default to /not/ truncate lines...
 (add-hook 'org-mode-hook (lambda () (setq truncate-lines nil)))
+
+;; bind <C-c c> to org-capture
+(global-set-key (kbd "C-c c") #'org-capture)
+
+;; default notes (ie journal) file
+(setq org-default-notes-file "~/org/journal.org")
+
+;; create quick note journal template (for use with <C-c c>
+(setq org-capture-templates
+      '(("j" "Journal Entry" entry
+         (file+olp+datetree org-default-notes-file)
+         "* %<%H:%M> %?\n"
+         :empty-lines 1)))
