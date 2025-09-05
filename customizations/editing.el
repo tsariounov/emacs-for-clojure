@@ -71,4 +71,9 @@
       (ns-get-selection-internal 'CLIPBOARD)
     (quit nil)))
 
+;; electric indent is actully useful
 ;;(setq electric-indent-mode nil)
+
+;; delete trailin whitespace on saves
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
