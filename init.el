@@ -36,7 +36,8 @@
     "shell-integration.el"
     "lang.el"
     "infra.el"
-    "orgmode.el"))
+    "orgmode.el"
+    "json-redact.el"))
 
 (dolist (x addons)
   (load x))
