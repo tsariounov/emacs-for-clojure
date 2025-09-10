@@ -8,7 +8,7 @@
 ;;; Commentary:
 
 ;; Simple package to redact sensitive JSON values like passwords, tokens, etc.
-;; Written with copilot agent mode, clause sonnet 4 model, and a few iterations...
+;; Written with copilot agent mode, claude sonnet 4 model, and a few iterations...
 
 ;;; Code:
 
