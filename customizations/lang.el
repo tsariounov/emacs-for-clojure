@@ -18,9 +18,10 @@
 (add-to-list 'auto-mode-alist '("\\.env$" . sh-mode))
 
 ;; fix up paredit mode in M-: evals
-(defun er-conditionally-enable-paredit-mode ()
-  "Enable `paredit-mode' in the minibuffer, during `eval-expression'."
-  (if (eq this-command 'eval-expression)
-      (paredit-mode 1)))
+(defun my-eval-minibuffer-enable-paredit-hook ()
+  "Enable paredit-mode and fix RET in eval-expression minibuffer."
+  (enable-paredit-mode)
+  (unbind-key (kbd "RET") paredit-mode-map))
 
-(add-hook 'minibuffer-setup-hook 'er-conditionally-enable-paredit-mode)
+(add-hook 'eval-expression-minibuffer-setup-hook #'my-eval-minibuffer-enable-paredit-hook)
+
