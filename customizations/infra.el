@@ -13,3 +13,6 @@
 (setup (:package terraform-mode))
 (add-hook 'terraform-mode-hook #'terraform-format-on-save-mode)
 
+;; auto revert all buffers mode
+(global-auto-revert-mode)
+
