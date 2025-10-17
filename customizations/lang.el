@@ -2,12 +2,12 @@
 ;; arg subst works
 (yas-global-mode 1)
 
-;; golang-mode for go :) 
+;; golang-mode for go :)
 (setup (:package go-mode)
        (:local-hook before-save-hook gofmt-before-save))
 (add-hook 'go-mode-hook 'lsp-deferred)
 
-;; python-mode for python :) 
+;; python-mode for python :)
 (setup (:package python-mode))
 (add-hook 'python-mode-hook 'lsp-deferred)
 
@@ -24,4 +24,3 @@
   (unbind-key (kbd "RET") paredit-mode-map))
 
 (add-hook 'eval-expression-minibuffer-setup-hook #'my-eval-minibuffer-enable-paredit-hook)
-
