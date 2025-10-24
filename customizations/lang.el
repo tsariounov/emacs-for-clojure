@@ -22,5 +22,10 @@
   "Enable paredit-mode and fix RET in eval-expression minibuffer."
   (enable-paredit-mode)
   (unbind-key (kbd "RET") paredit-mode-map))
-
 (add-hook 'eval-expression-minibuffer-setup-hook #'my-eval-minibuffer-enable-paredit-hook)
+
+;; fix up paredit mode in IELM mode
+(defun my-ielm-enable-ret ()
+  "Override paredit's RET mapping to work with ielm."
+  (unbind-key (kbd "RET") paredit-mode-map))
+(add-hook 'ielm-mode-hook 'my-ielm-enable-ret)
