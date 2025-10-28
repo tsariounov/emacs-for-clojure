@@ -50,3 +50,6 @@
 
 (setq custom-file (concat user-emacs-directory "custom.el"))
 (load custom-file 'noerror)
+
+(setq lmi-file (concat user-emacs-directory "local-machine-init.el"))
+(load lmi-file 'noerror)
