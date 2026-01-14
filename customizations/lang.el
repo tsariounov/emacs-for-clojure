@@ -11,6 +11,11 @@
 (setup (:package python-mode))
 (add-hook 'python-mode-hook 'lsp-deferred)
 
+;; ignore worktree directories for lsp watching and increase watch number (default 1000)
+(with-eval-after-load 'lsp-mode
+  (add-to-list 'lsp-file-watch-ignored-directories "[/\\\\]\\.worktrees\\'"))
+(setq lsp-file-watch-threshold 1500)
+
 ;; json-mode for json...
 (setup (:package json-mode))
 
