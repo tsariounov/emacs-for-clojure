@@ -47,9 +47,11 @@
 ;; https://github.com/doomemacs/themes/tree/screenshots
 (setup (:package doom-themes)
   (when (not custom-enabled-themes)
-    (load-theme 'modus-vivendi-tinted)))
+    (load-theme 'doom-pine t)
+    ))
+;;    (load-theme 'modus-vivendi-tinted)
 ;;    (load-theme 'doom-tokyo-night t)
-;;    (load-theme 'doom-dracula t)))
+;;    (load-theme 'doom-dracula t)
 
 ;; These settings relate to how emacs interacts with your operating system
 (setq ;; makes killing/yanking interact with the clipboard
