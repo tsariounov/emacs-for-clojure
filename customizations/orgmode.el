@@ -16,12 +16,23 @@
 ;; bind <C-c c> to org-capture
 (global-set-key (kbd "C-c c") #'org-capture)
 
-;; default notes (ie journal) file
-(setq org-default-notes-file "~/org/journal.org")
+;; add timestamp automatically to done tasks (C-c C-t)
+(setq org-log-done 'time)
 
-;; create quick note journal template (for use with <C-c c>
+;; move done tasks to archive when: C-c C-x C-a
+(setq org-archive-location "~/org/todo-done.org::* Finished Tasks")
+
+
+;; capture templates for use with C-c c
+
+;; create quick note journal template
 (setq org-capture-templates
       '(("j" "Journal Entry" entry
-         (file+olp+datetree org-default-notes-file)
+         (file+olp+datetree "~/org/journal.org")
          "* %<%H:%M> %?\n"
          :empty-lines 1)))
+
+;; create global todo list
+(add-to-list  'org-capture-templates
+              '("t" "Todo" entry (file+headline "~/org/todo.org" "Tasks")
+                "* TODO %?\n  - Captured on: %U\n  %i\n  %a"))
