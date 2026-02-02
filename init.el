@@ -40,6 +40,7 @@
     "orgmode.el"
     "json-redact.el"
     "ai.el"
+    "theme-switch.el"
     ))
 
 (dolist (x addons)
