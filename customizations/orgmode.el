@@ -35,4 +35,6 @@
 ;; create global todo list
 (add-to-list  'org-capture-templates
               '("t" "Todo" entry (file+headline "~/org/todo.org" "Tasks")
-                "\n* TODO %?\n  - Captured on: %U\n  %i\n  %a\n"))
+                "* TODO %?\n  - Captured on: %U\n  %i\n  %a\n"
+                :prepend t
+                :empty-lines 1))
