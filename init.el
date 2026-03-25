@@ -41,6 +41,7 @@
     "json-redact.el"
     "ai.el"
     "theme-switch.el"
+    "jwt-decode.el"
     ))
 
 (dolist (x addons)
