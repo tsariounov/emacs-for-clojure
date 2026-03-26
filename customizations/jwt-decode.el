@@ -51,8 +51,12 @@ Displays the decoded claims in a *JWT Claims* buffer."
         (erase-buffer)
         (insert (jwt--pp-json claims))
         (goto-char (point-min))
-        (when (fboundp 'js-mode) (js-mode))
-        (special-mode)))
+        (cond
+         ((fboundp 'json-mode) (json-mode))
+         ((fboundp 'js-json-mode) (js-json-mode))
+         ((fboundp 'js-mode) (js-mode)))
+        (read-only-mode 1)
+        (local-set-key (kbd "q") #'quit-window)))
     (display-buffer buf)))
 
 ;;;###autoload
