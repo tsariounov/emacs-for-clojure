@@ -5,9 +5,11 @@
   (interactive)
   (let* ((my-favorites '("doom-pine"
                          "modus-vivendi-tinted"
+                         "doom-acario-dark"
                          "doom-tokyo-night"
                          "doom-dracula"
-                         "doom-solarized-dark"))
+                         "doom-solarized-dark"
+                         "misterioso"))
          (choice (completing-read "Switch to theme: " my-favorites nil t)))
     (when (and choice (not (string-empty-p choice)))
       ;; Disable all current themes to prevent color clashing

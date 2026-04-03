@@ -3,3 +3,6 @@
 (add-to-list 'package-pinned-packages '(magit . "melpa-stable") t)
 (setup (:package magit)
   (:global "C-M-;" magit-status))
+
+;; mark changes that have not been commited yet
+(setup (:package git-gutter))
