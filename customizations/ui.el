@@ -45,7 +45,7 @@
 ;; confirmation. You can see what they all
 ;; look like here:
 ;; https://github.com/doomemacs/themes/tree/screenshots
-(setup (:pa ckage doom-themes)
+(setup (:package doom-themes)
     (load-theme 'modus-vivendi-tinted t)
     )
 ;;  (when (not custom-enabled-themes)
