@@ -45,11 +45,10 @@
 ;; confirmation. You can see what they all
 ;; look like here:
 ;; https://github.com/doomemacs/themes/tree/screenshots
-(setup (:package doom-themes)
-  (when (not custom-enabled-themes)
-    (load-theme 'doom-pine t)
-    ))
-;;    (load-theme 'modus-vivendi-tinted)
+(setup (:pa ckage doom-themes)
+    (load-theme 'modus-vivendi-tinted t)
+    )
+;;  (when (not custom-enabled-themes)
 ;;    (load-theme 'doom-tokyo-night t)
 ;;    (load-theme 'doom-dracula t)
 
