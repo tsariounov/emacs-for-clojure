@@ -42,6 +42,7 @@
     "ai.el"
     "theme-switch.el"
     "jwt-decode.el"
+    "cluster-get-versions.el"
     ))
 
 (dolist (x addons)
