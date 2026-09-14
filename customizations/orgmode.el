@@ -45,3 +45,6 @@
 
 (with-eval-after-load 'org
                       (define-key org-mode-map (kbd "C-c C-r") verb-command-map))
+
+;; org->md coversion
+(require 'ox-md)
