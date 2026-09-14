@@ -1,3 +1,4 @@
+;;-*- lexical-binding: t; -*-
 ;; javascript / html
 (setup (:package tagedit)
   (:hook-into html-mode))

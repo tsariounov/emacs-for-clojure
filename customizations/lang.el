@@ -1,3 +1,4 @@
+;;-*- lexical-binding: t; -*-
 ;; activate yas minor mode in all modes that support it so
 ;; arg subst works
 (yas-global-mode 1)

@@ -1,3 +1,4 @@
+;;-*- lexical-binding: t; -*-
 ;; These customizations change the way emacs looks and disable/enable
 ;; some user interface elements. Some useful customizations are
 ;; commented out, and begin with the line "CUSTOMIZE". These are more

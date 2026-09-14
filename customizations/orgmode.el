@@ -1,3 +1,4 @@
+;;-*- lexical-binding: t; -*-
 ;; org-mode customizations
 (require 'org)
 
@@ -38,3 +39,9 @@
                 "* TODO %?\n  - Captured on: %U\n  %i\n  %a\n"
                 :prepend t
                 :empty-lines 1))
+
+;; verb - rest in org
+(setup (:package verb))
+
+(with-eval-after-load 'org
+                      (define-key org-mode-map (kbd "C-c C-r") verb-command-map))

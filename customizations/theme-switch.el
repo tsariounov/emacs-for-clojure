@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t; -*-
+
 ;; Custom theme mini switcher, only shows faves
 
 (defun my/theme-selector ()

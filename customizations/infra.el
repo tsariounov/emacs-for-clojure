@@ -1,3 +1,4 @@
+;;-*- lexical-binding: t; -*-
 ;; Infrastructure modes
 
 ;; ripgrep!!
