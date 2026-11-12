@@ -8,7 +8,8 @@
 (setup (:package dockerfile-mode))
 
 ;; docker compose mode
-(setup (:package docker-compose-mode))
+;; it's dead, jim
+;;(setup (:package docker-compose-mode))
 
 ;; terraform
 (setup (:package terraform-mode))
