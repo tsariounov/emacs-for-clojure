@@ -66,3 +66,4 @@
 
 (setq lmi-file (concat user-emacs-directory "local-machine-init.el"))
 (load lmi-file 'noerror)
+(put 'narrow-to-region 'disabled nil)

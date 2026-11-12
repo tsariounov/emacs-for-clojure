@@ -78,3 +78,16 @@
 ;; delete trailin whitespace on saves
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
+;; replace string delimited by quotes at point
+(defun query-replace-in-string-at-point ()
+  (interactive)
+  (let* ((state (syntax-ppss))
+         (start (nth 8 state)))
+    (unless (nth 3 state)
+      (user-error "Point is not inside a string"))
+    (let* ((end (scan-sexps start 1))
+           (from (buffer-substring-no-properties
+                  (1+ start) (1- end)))
+           (to (read-string (format "Replace %S with: " from))))
+      (query-replace from to nil (point-min) (point-max)))))
+(global-set-key (kbd "C-c r") #'query-replace-in-string-at-point)
